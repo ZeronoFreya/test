@@ -1,0 +1,5 @@
+class loadImageToLi: Behavior {
+    function attached() {
+        this.style#background-image = "url(" + this.@#data-src + ")";
+    }
+}
