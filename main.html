@@ -1,0 +1,24 @@
+<html window-icon="icon.png" window-frame="transparent" window-resizable>
+<head>
+    <title></title>
+    <style type="text/css" src="css.scs"></style>
+    <script type="text/tiscript">
+        self.ready = function(){
+            $(#window-btn).on("click", function(){
+                $(#ul).$append(<li data-src='http://sciter.com/wp-content/uploads/2016/11/legos.jpg'></li>);
+              });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <window-caption role="window-caption">Title</window-caption>
+        <window-button #window-btn>?</window-button>
+        <window-button #window-close role="window-close"></window-button>
+    </header>
+    <section>
+        <ul#ul></ul>
+    </section>
+    <footer>State</footer>
+</body>
+</html>
