@@ -1,0 +1,82 @@
+@import "common.scs";
+@const width: 800dip;
+@const li-width: 189.5dip;
+html {
+    padding: 5dip;
+    background: transparent;
+    width: @width;
+    height: width(61.8%);
+}
+
+body {
+    size: *;
+    border-radius: 5px;
+    background: @bg_color;
+    overflow: hidden;
+}
+
+header {
+    height: 30dip;
+    width: *;
+    flow: horizontal;
+}
+
+section {
+    height: *;
+}
+
+footer {
+    height: 20dip;
+}
+
+ul {
+    flow: horizontal-wrap;
+    border-spacing: 10dip;
+    size: *;
+    overflow: hidden;
+    overflow-y: scroll-indicator;
+    padding: 5dip;
+    background: @light_gray;
+}
+
+li {
+    prototype: loadImageToLi url("loadimagetoli.tis");
+    width: @li-width;
+    height: 200dip;
+    style-set: set-background;
+    background-color: #ffffff;
+    background-size: contain;
+    box-shadow: 1px 2px 5px -1px rgba(0, 0, 0, .3);
+    background-image :url(icon.png);
+    position: relative;
+}
+
+window-button {
+    display: inline-block;
+    height: *;
+    width: 30dip;
+    outline-color: red;
+    behavior: clickable;
+    style-set: set-background;
+    background-size: 14dip 14dip;
+    fill: @dark_gray;
+    cursor: pointer;
+}
+
+window-caption {
+    display: block;
+    width: *;
+    padding: 4dip 8dip;
+}
+
+window-button#window-close {
+    background-image: url("power.svg");
+    border-radius: 5dip;
+}
+
+window-button#window-close:hover {
+    fill: @light_font;
+    background-color: red;
+    outline: 5px glow red -1px;
+    transition: fill(linear, 200ms) outline(linear, 200ms) background-color(linear, 200ms);
+}
